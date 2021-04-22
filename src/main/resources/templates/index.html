@@ -1,28 +1,12 @@
-<!doctype html>
-<html xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 
-<head>
+<th:block th:replace="~{layout/basic :: setContent(~{this::content} )}">
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <th:block th:fragment="content">
 
-    <title>Test Homepage</title>
+        <h1 class="mt-4">Greenart Homepage      </h1>
 
-    <!-- Bootstrap core CSS -->
-    <link th:href="@{/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link th:href="@{/css/simple-sidebar.css}" rel="stylesheet">
-
-    <!-- Bootstrap core JavaScript -->
-    <script th:src="@{/vendor/jquery/jquery.min.js}"></script>
-    <script th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
-
-</head>
-
-<body>
 
 <div class="d-flex" id="wrapper">
 
