@@ -20,7 +20,7 @@ public class Member2Controller {
 	private final Member2Service member2Service;
 	
 ///////////////////////////////////////////////////////////////////////////
-	@GetMapping("/M2register")
+	@GetMapping("M2register")
 	public String register(){
 	log.info("regiser get get get...");
 	return "member/M2register";   //  member/register.html로 이동
