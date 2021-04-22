@@ -23,7 +23,7 @@ public class Member2Controller {
 	@GetMapping("/M2register")
 	public String register(){
 	log.info("regiser get get get...");
-	return "/member/M2register";   //  member/register.html로 이동
+	return "member/M2register";   //  member/register.html로 이동
 	}
 	
 	@PostMapping("/M2register")
