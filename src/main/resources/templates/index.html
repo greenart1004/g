@@ -3,7 +3,10 @@
 
 <th:block th:replace="~{layout/basic :: setContent(~{this::content} )}">
 
-
+    <th:block th:fragment="content">
+    
+        <h1 class="mt-4">Home Page</h1>
+    
 	<script th:javascript>
 		function aa(){
 			var age = 21;
@@ -20,5 +23,8 @@
 		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
 		crossorigin="anonymous"></script>
 
- 	</body>
-  </html>
+
+    </th:block>
+
+</th:block>
+
