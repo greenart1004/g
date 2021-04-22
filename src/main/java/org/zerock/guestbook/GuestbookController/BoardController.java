@@ -24,12 +24,44 @@ public class BoardController {
     private final BoardService boardService;
 
 ///////////////////////////////////////////////////////////////////////////////////////////    
-    
+////////////////////////////////////////////////////////////////////////////
+	@GetMapping("/register")
+	public String register(){
+	log.info("regiser get get get...");
+	return "board/register";
+	}
+	
+	@PostMapping("/register")
+	public String registerPost(BoardDTO boardDTO, RedirectAttributes redirectAttributes){
+	
+	log.info("dto1..." + boardDTO);
+	//새로 추가된 엔티티의 번호
+	Long gno1 = boardService.register(boardDTO);
+	
+	log.info("post post post post " + gno1);
+	
+	redirectAttributes.addFlashAttribute("msg", gno1);
+	
+	return "redirect:/board/list";
+	}
+	
+	@GetMapping({"/read", "/modify" })
+	public void read(@ModelAttribute("requestDTO") PageRequestDTO pageRequestDTO, Long gno1, Model model){
+	
+	log.info("gno1: " + gno1);
+	
+	BoardDTO boardDTO = boardService.get(gno1);
+	
+	log.info(boardDTO);
+	
+	model.addAttribute("dto", boardDTO);
+	
+	}
     
     @GetMapping("/list")
     public void list(@ModelAttribute("PageRequestDTO")PageRequestDTO pageRequestDTO, Model model){
 
-        log.info("list............." + pageRequestDTO);
+        log.info("list... get get.get get........." + pageRequestDTO);
 
         model.addAttribute("result", boardService.getList(pageRequestDTO));
       
@@ -115,39 +147,7 @@ public class BoardController {
         model.addAttribute("result", boardService.getList(pageRequestDTO));
     }
 
-////////////////////////////////////////////////////////////////////////////
-    @GetMapping("/register")
-    public String register(){
-        log.info("regiser get...");
-        return "/board/register";
-    }
 
-    @PostMapping("/register")
-    public String registerPost(BoardDTO boardDTO, RedirectAttributes redirectAttributes){
-
-        log.info("dto1..." + boardDTO);
-        //새로 추가된 엔티티의 번호
-        Long gno1 = boardService.register(boardDTO);
-
-        log.info("gno1: " + gno1);
-
-       redirectAttributes.addFlashAttribute("msg", gno1);
-
-        return "redirect:list";
-    }
-
-    @GetMapping({"/read", "/modify" })
-    public void read(@ModelAttribute("requestDTO") PageRequestDTO pageRequestDTO, Long gno1, Model model){
-
-        log.info("gno1: " + gno1);
-
-        BoardDTO boardDTO = boardService.get(gno1);
-
-        log.info(boardDTO);
-
-        model.addAttribute("dto", boardDTO);
-
-    }
 
 
 }
