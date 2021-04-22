@@ -37,7 +37,7 @@ public class Member2Controller {
 	
 	redirectAttributes.addFlashAttribute("msg", mno);
 	
-	return "redirect:/";  ///?????
+	return "/";  ///?????
 }
 
 }
