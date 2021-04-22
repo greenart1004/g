@@ -3,55 +3,6 @@
 
 <th:block th:replace="~{layout/basic :: setContent(~{this::content} )}">
 
-    <th:block th:fragment="content">
-
-        <h1 class="mt-4">Greenart Homepage      </h1>
-
-
-<div class="d-flex" id="wrapper">
-
-    <!-- Sidebar -->
-    <div class="bg-light border-right" id="sidebar-wrapper">
-        <div class="sidebar-heading">YB Tech </div>
-        <div class="list-group list-group-flush">
-            <a href="#" th:href="@{/board/introduce1}" class="list-group-item list-group-item-action bg-light">회사소개</a>
-            <a href="#" th:href="@{/board/introduce2}" class="list-group-item list-group-item-action bg-light">회사연혁</a>
-            <a href="#" th:href="@{/board/introduce3}" class="list-group-item list-group-item-action bg-light">주요제품</a>
-            <a href="#" th:href="@{/board/introduce4}" class="list-group-item list-group-item-action bg-light">회사위치</a>
-            <a href="#" th:href="@{/board/introduce5}" class="list-group-item list-group-item-action bg-light">공지사항</a>
-            <a href="#" th:href="@{/board/list}" class="list-group-item list-group-item-action bg-light">자유게시판</a>
-        </div>
-    </div>
-    <!-- /#sidebar-wrapper -->
-
-    <!-- Page Content -->
-    <div id="page-content-wrapper">
-
-        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-            <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                    <li class="nav-item active">
-                        <a th:href="@{/}" class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"  th:href="@{/board/introduce3}">주요제품</a>
-                    </li>
-                  </ul>
-            </div>
-        </nav>
-
-        <div class="container-fluid">
-	
-		 <h1>  Home Page</h1>   
-
-
-
 
 	<script th:javascript>
 		function aa(){
