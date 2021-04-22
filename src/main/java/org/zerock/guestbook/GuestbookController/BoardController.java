@@ -16,7 +16,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 
 @Controller
-@RequestMapping("/board")
+@RequestMapping("/board/")
 @Log4j2
 @RequiredArgsConstructor
 public class BoardController {
@@ -133,7 +133,7 @@ public class BoardController {
 
        redirectAttributes.addFlashAttribute("msg", gno1);
 
-        return "redirect:/board/list";
+        return "redirect:list";
     }
 
     @GetMapping({"/read", "/modify" })
