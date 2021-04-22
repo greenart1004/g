@@ -1,5 +1,6 @@
 package org.zerock.guestbook.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -23,17 +24,20 @@ public class Member2 extends BaseEntity{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long mno;
     
+    @Column(length = 50, nullable = false)
     private String idno;
     
+    @Column(length = 50, nullable = false)
     private String password;
     
+    @Column(length = 50, nullable = false)
     private String email;
 
-	public void changeEmail(String email2) {
+	public void changeEmail(String email) {
 		this.email = email;		
 	}
 
-	public void changeIdno(String idno2) {
+	public void changeIdno(String idno) {
 		this.idno = idno;			
 	}
     

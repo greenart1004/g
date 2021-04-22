@@ -9,20 +9,20 @@
 
         <form th:action="@{/member/M2register}" th:method="post">
             <div class="form-group">
-                <label >Title</label>
-                <input type="text" class="form-control" name="title1" placeholder="Enter Title">
+                <label >idno</label>
+                <input type="text" class="form-control" name="idno" placeholder="사용자 id를 입력하세요">
             </div>
             <div class="form-group">
-                <label >Content</label>
-                <textarea class="form-control" rows="5" name="content1"></textarea>
+                <label >password</label>
+                <input type="password" class="form-control" name="password" placeholder="사용자 password를 입력하세요"></input>
             </div>
             <div class="form-group">
-                <label >Writer Email</label>
-                <input type="email" class="form-control" name="writer1" placeholder="Writer Email ">
+                <label >E-mail</label>
+                <input type="email" class="form-control" name="email" placeholder="ex) AAA@naver.com // 형식에 맞게 입력하세요">
             </div>
 
             <button type="submit" class="btn btn-primary">등록하기</button>
-		   	<a class="btn btn-primary" type="button" th:href="@{list}">리스트</a>
+    	 <!--  	<a class="btn btn-primary" type="button" th:href="@{/}">취소</a>-->
 
         </form>
 
