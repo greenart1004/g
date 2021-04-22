@@ -1,4 +1,4 @@
-package org.zerock.guestbook.GuestbookController;
+package org.zerock.guestbook.Controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

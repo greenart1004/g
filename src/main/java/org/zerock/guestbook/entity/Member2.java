@@ -17,15 +17,24 @@ import lombok.ToString;
 @NoArgsConstructor
 @Getter
 @ToString
-public class Member1 extends BaseEntity{
+public class Member2 extends BaseEntity{
 	
-	@Id
-    private String email1;
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long mno;
     
-    private String password1;
+    private String idno;
+    
+    private String password;
+    
+    private String email;
 
-    private String name1;
+	public void changeEmail(String email2) {
+		this.email = email;		
+	}
 
+	public void changeIdno(String idno2) {
+		this.idno = idno;			
+	}
     
 }
