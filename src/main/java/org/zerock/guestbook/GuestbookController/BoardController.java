@@ -16,7 +16,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 
 @Controller
-@RequestMapping("/board/")
+@RequestMapping("/board")
 @Log4j2
 @RequiredArgsConstructor
 public class BoardController {
@@ -37,7 +37,7 @@ public class BoardController {
 
     }
 
-    @PostMapping("/remove")
+    @PostMapping("remove")
     public String remove(long gno1, RedirectAttributes redirectAttributes){
 
 
@@ -51,7 +51,7 @@ public class BoardController {
 
     }
 
-    @PostMapping("/modify")
+    @PostMapping("modify")
     public String modify(BoardDTO boardDTO,
                          @ModelAttribute("requestDTO") PageRequestDTO requestDTO,
                          RedirectAttributes redirectAttributes){

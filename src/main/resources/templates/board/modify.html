@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
 
 <th:block th:replace="~{layout/basic :: setContent(~{this::content} )}">
 
@@ -7,7 +11,7 @@
 
         <h1 class="mt-4">글 수정</h1>
 
-        <form action="board/modify" method="post">
+        <form action="/modify" method="post">
 
             <!--페이지 번호  -->
             <input type="hidden" name="page" th:value="${requestDTO.page}">
@@ -59,7 +63,7 @@
                     .attr("action", "/board/remove")
                     .attr("method","post");
 
-                actionForm.submit();
+               		 actionForm.submit();
 
             });
 
@@ -74,6 +78,7 @@
                     .attr("method","post")
                     .submit();
             });
+
 
             $(".listBtn").click(function() {
 

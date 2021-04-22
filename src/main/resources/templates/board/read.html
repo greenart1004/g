@@ -33,11 +33,11 @@
             <input type="text" class="form-control" name="modDate1" th:value="${#temporals.format(dto.modDate1, 'yyyy/MM/dd HH:mm:ss')}" readonly>
         </div>
 
-        <a th:href="@{board/modify(gno1 = ${dto.gno1}, page=${requestDTO.page}, type=${requestDTO.type}, keyword =${requestDTO.keyword})}">
+        <a th:href="@{/board/modify(gno1 = ${dto.gno1}, page=${requestDTO.page}, type=${requestDTO.type}, keyword =${requestDTO.keyword})}">
             <button type="button" class="btn btn-primary">Modify</button>
         </a>
 
-        <a th:href="@{board/list(page=${requestDTO.page} , type=${requestDTO.type}, keyword =${requestDTO.keyword})}">
+        <a th:href="@{/board/list(page=${requestDTO.page} , type=${requestDTO.type}, keyword =${requestDTO.keyword})}">
             <button type="button" class="btn btn-info">List</button>
         </a>
 
