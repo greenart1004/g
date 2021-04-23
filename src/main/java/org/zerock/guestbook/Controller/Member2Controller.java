@@ -72,12 +72,14 @@ public class Member2Controller {
 	
 	log.info("member2DTO.1111111111111111.." + mem );
 		if(mem == null) {
-			log.info("em.getPassword())   2222222222" + mem.getIdno());
+			log.info("mem.getPassword())   2222222222" );
 			return "member/M2loginform";
+		//	return "redirect:/member/M2loginform";
 		}
 		if(!loginPassword.equals(mem.getPassword())) {
-			log.info("em.getPassword())   3333333333" + mem.getPassword() );
+			log.info("mem.getPassword())   3333333333");
 			return "member/M2loginform";
+//			return "redirect:/member/M2loginform";
 		}
 		
 		//	redirectAttributes.addFlashAttribute("msg", idno);
