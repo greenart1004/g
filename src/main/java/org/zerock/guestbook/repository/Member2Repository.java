@@ -7,6 +7,7 @@ import org.zerock.guestbook.entity.Member2;
 
 public interface Member2Repository extends JpaRepository<Member2, Long>
 , QuerydslPredicateExecutor<Member2>{
-
+	
+	Member2 findByIdno(String idno);
 
 }

@@ -20,20 +20,20 @@
         </form> -->
 
 
-        <form class="form-validate"  th:action="@{/member/M2loginform}">
+        <form class="form-validate"  th:action="@{/member/M2loginform}"  th:method="post">
             <div>
                 <div class="form-group">
-                <label class="form-label" for="loginUsername">ID</label>
-                <input class="form-control" name="loginUsername" id="loginUsername" type="email" placeholder="name@address.com" autocomplete="off" required data-msg="Please enter your email">
+                <label class="form-label" for="loginUsername">사용자 ID</label>
+                <input class="form-control" name="loginUsername" required data-msg="Please enter your password" id="loginUsername" type="text" placeholder= "ID" autocomplete="off">
                 </div>
                 <div class="form-group mb-4">
                 <div class="row">
                     <div class="col">
-                    <label class="form-label" for="loginPassword"> Password</label>
+                    <label class="form-label" for="loginPassword"> 사용자 Password</label>
                     </div>
                     <div class="col-auto"><a class="form-text small" href="#">Forgot password?</a></div>
                 </div>
-                <input class="form-control" name="loginPassword" id="loginPassword" placeholder="Password" type="password" required data-msg="Please enter your password">
+                <input class="form-control" name="loginPassword" required data-msg="Please enter your password" id="loginPassword" placeholder="Password" type="password">
                 </div>
                 <div class="form-group mb-4">
                 <div class="custom-control custom-checkbox">
@@ -42,11 +42,15 @@
                 </div>
                 </div>
                 <!-- Submit-->
-                <button class="btn btn-lg btn-block btn-primary">Sign in</button>
+                <button type="submit" class="btn btn-primary">등록하기</button>
+                <!--<a class="btn btn-primary" type="button">로그인</a>-->
+                <a class="btn btn-primary" type="button" th:href="@{index}">홈으로</a>
+               <!--<button class="btn btn-sg btn-block btn-primary">Sign in</button>-->
+
                 <hr class="my-3 hr-text letter-spacing-2" data-content="OR">
                 <hr class="my-4">
                 <p class="text-center"><small class="text-muted text-center">Don't have an account yet? <a href="signup.html">Sign Up                </a></small></p>
-            </form><a class="close-absolute mr-md-5 mr-xl-6 pt-5" href="index.html">
+            </form>
         </div>
     </th:block>
 
