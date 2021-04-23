@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:replace="~{layout/basic :: setContent(~{this::content} )}">
+
+    <th:block th:fragment="content">
+            <label for="username">로그인</label>
+
+        <!-- <form th:action="@{/member/M2loginform}" th:method="post">        
+            <br>
+            <label for="password">ID</label>
+            <input id="id" name="id" type="text">
+            <br>
+
+            <label for="password">Password</label>
+            <input id="pw" name="pw" type="password">
+            <br>
+
+            <input type="submit" value="submit">
+        </form> -->
+
+
+        <form class="form-validate"  th:action="@{/member/M2loginform}">
+            <div>
+                <div class="form-group">
+                <label class="form-label" for="loginUsername">ID</label>
+                <input class="form-control" name="loginUsername" id="loginUsername" type="email" placeholder="name@address.com" autocomplete="off" required data-msg="Please enter your email">
+                </div>
+                <div class="form-group mb-4">
+                <div class="row">
+                    <div class="col">
+                    <label class="form-label" for="loginPassword"> Password</label>
+                    </div>
+                    <div class="col-auto"><a class="form-text small" href="#">Forgot password?</a></div>
+                </div>
+                <input class="form-control" name="loginPassword" id="loginPassword" placeholder="Password" type="password" required data-msg="Please enter your password">
+                </div>
+                <div class="form-group mb-4">
+                <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" id="loginRemember" type="checkbox">
+                    <label class="custom-control-label text-muted" for="loginRemember"> <span class="text-sm">Remember me for 30 days</span></label>
+                </div>
+                </div>
+                <!-- Submit-->
+                <button class="btn btn-lg btn-block btn-primary">Sign in</button>
+                <hr class="my-3 hr-text letter-spacing-2" data-content="OR">
+                <hr class="my-4">
+                <p class="text-center"><small class="text-muted text-center">Don't have an account yet? <a href="signup.html">Sign Up                </a></small></p>
+            </form><a class="close-absolute mr-md-5 mr-xl-6 pt-5" href="index.html">
+        </div>
+    </th:block>
+
+</th:block>

@@ -29,7 +29,7 @@ public class Member2Controller {
 	@PostMapping("/M2register")
 	public String registerPost(Member2DTO member2DTO, RedirectAttributes redirectAttributes){
 	
-	log.info("dto1..." + member2DTO);
+	log.info("post post post postdto1..." + member2DTO);
 	//새로 추가된 엔티티의 번호
 	Long mno = member2Service.register(member2DTO);
 	
@@ -37,7 +37,21 @@ public class Member2Controller {
 	
 	redirectAttributes.addFlashAttribute("msg", mno);
 	
-	return "index.html";  ///?????
-}
+	return "member/M2loginform";
+	}
 
+	@PostMapping("/M2loginform")
+	public String loginformPost(Member2DTO member2DTO, RedirectAttributes redirectAttributes){
+	
+	log.info("dto1..." + member2DTO);
+	//새로 추가된 엔티티의 번호
+//	Long mno = member2Service.register(member2DTO);
+//	
+//	log.info("post post post post " + mno);
+//	
+//	redirectAttributes.addFlashAttribute("msg", mno);
+	
+	return "index.html";  
+	}
+	
 }
